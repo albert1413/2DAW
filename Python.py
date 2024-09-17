@@ -2,7 +2,7 @@ class Dad:
     def __init__(self, firstName, lastName, name):
         self.firstName = firstName
         self.lastName = lastName
-        self.name = name
+        self.name =  name
 
     def getDadFirstName(self):
         return self.firstName
