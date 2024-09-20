@@ -24,4 +24,4 @@ class Estalvi(Compte):
 
     def mostraEstalvis(self):
         print(f"Estalvis: {self.diners}")
-        
+ 
