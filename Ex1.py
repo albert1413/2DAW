@@ -36,4 +36,3 @@ child = Child("Xavi", dad, mom)
 print(child.getFullName())
 print(dad.getDadFullName())
 print(mom.getMomFullName())
-
