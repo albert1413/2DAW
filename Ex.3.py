@@ -5,7 +5,7 @@ class Compte:
         self.email = email
         self.saldo = saldo
     def info(self):
-        print(f"Nom: {self.nom}, Telefon: {self.telefon}, Email: {self.email}, Saldo{self.saldo} ")
+        print(f"Nom: {self.nom}, Telefon: {self.telefon}, Email: {self.email}, Saldo: {self.saldo} ")
 
 class Fixe(Compte):
     def __init__(self, nom, telefon, email, saldo, plaç, interes):
@@ -94,6 +94,7 @@ while True:
     print("5. Modificar un client")
     print("6. Eliminar un client")
     print("7. Sortir")
+    print("")
 
     opcio = input("Introdueix una opció: ")
 
