@@ -29,12 +29,12 @@ while True:
         telefon = input("Introdueix el telèfon del client: ")
         email = input("Introdueix l'email del client: ")
         saldo = Ex3.llegir_numero("Introdueix el saldo del client: ")   
-        tipus = input("Introdueix el tipus de compte (Fixe o Estalvi): ")
-        if tipus == "Fixe":
+        tipus = input("Introdueix el tipus de compte (Fixe o Estalvi): ").
+        if tipus.lower() == "fixe":
             plac = input("Introdueix el plaç del compte: ")
             interes = Ex3.llegir_numero("Introdueix l'interès del compte: ")
             client = Ex3.Fixe(nom, telefon, email, saldo, plac, interes)
-        elif tipus == "Estalvi":
+        elif tipus.lower() == "estalvi":
             diners = Ex3.llegir_numero("Introdueix els diners estalviats: ")
             client = Ex3.Estalvi(nom, telefon, email, saldo, diners)
         banc.afegir_client(client)
