@@ -43,9 +43,8 @@ class Banc():
             print()
 
     def mostrar_client(self, nom):
-        nom_lower = nom.lower()
         for client in self.clients:
-            if client.nom.lower() == nom_lower:
+            if client.nom == nom:
                 if isinstance(client, Fixe): #isinstance: mira si client es una instancia de la classe Fixe.
                     print(f"Plaç: {client.plac}, Interès: {client.interes}, Total: {client.saldo + client.calcul_interes(client.saldo)}")
                 elif isinstance(client, Estalvi):
@@ -54,8 +53,10 @@ class Banc():
         print("Client no trobat")
 
     def buscar_client(self, nom):
+        nom_lower = nom.lower()
         for client in self.clients:
-            if client.nom == nom:
+            client_lower = client.lower()
+            if client_lower == nom_lower:
                 return client
         return None
 
