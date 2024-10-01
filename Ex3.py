@@ -58,9 +58,8 @@ class Banc():
         for client in self.clients:
             client_lower = client.nom.lower()
             if client_lower == nom_lower: # Esta fet aixi per poder retornar el nom del client 
-                print("Client trobat")
                 return client
-        print("Client no trobat")
+        
         return None
 
     def modificar_client(self, nom, telefon, email, saldo):
@@ -69,14 +68,16 @@ class Banc():
             client.telefon = telefon
             client.email = email
             client.saldo = saldo
-        
+        else:
+            print("Client no trobat")
 
     def eliminar_client(self, nom):
         client = self.buscar_client(nom)
         if client:
             self.clients.remove(client)
             print(f"{nom} eliminat")
-        
+        else:
+            print("Client no trobat")
 
 def llegir_numero(missatge):
     while True:

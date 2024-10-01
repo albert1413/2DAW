@@ -49,6 +49,10 @@ while True:
     elif opcio == "4":
         nom = input("Introdueix el nom del client: ")
         client = banc.buscar_client(nom)
+        if client:
+            print("Client trobat")
+        else:
+            print("Client no trobat")
         
 
     elif opcio == "5":
