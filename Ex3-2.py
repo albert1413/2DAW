@@ -29,7 +29,7 @@ while True:
         telefon = input("Introdueix el telèfon del client: ")
         email = input("Introdueix l'email del client: ")
         saldo = Ex3.llegir_numero("Introdueix el saldo del client: ")   
-        tipus = input("Introdueix el tipus de compte (Fixe o Estalvi): ").
+        tipus = input("Introdueix el tipus de compte (Fixe o Estalvi): ")
         if tipus.lower() == "fixe":
             plac = input("Introdueix el plaç del compte: ")
             interes = Ex3.llegir_numero("Introdueix l'interès del compte: ")
@@ -49,10 +49,7 @@ while True:
     elif opcio == "4":
         nom = input("Introdueix el nom del client: ")
         client = banc.buscar_client(nom)
-        if client:
-            print("Client trobat")
-        else:
-            print("Client no trobat")
+        
 
     elif opcio == "5":
         nom = input("Introdueix el nom del client: ")

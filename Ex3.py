@@ -43,8 +43,9 @@ class Banc():
             print()
 
     def mostrar_client(self, nom):
+        nom_lower = nom.lower()
         for client in self.clients:
-            if client.nom == nom:
+            if client.nom.lower() == nom_lower:
                 if isinstance(client, Fixe): #isinstance: mira si client es una instancia de la classe Fixe.
                     print(f"Plaç: {client.plac}, Interès: {client.interes}, Total: {client.saldo + client.calcul_interes(client.saldo)}")
                 elif isinstance(client, Estalvi):
@@ -55,9 +56,11 @@ class Banc():
     def buscar_client(self, nom):
         nom_lower = nom.lower()
         for client in self.clients:
-            client_lower = client.lower()
-            if client_lower == nom_lower:
+            client_lower = client.nom.lower()
+            if client_lower == nom_lower: # Esta fet aixi per poder retornar el nom del client 
+                print("Client trobat")
                 return client
+        print("Client no trobat")
         return None
 
     def modificar_client(self, nom, telefon, email, saldo):
@@ -66,16 +69,14 @@ class Banc():
             client.telefon = telefon
             client.email = email
             client.saldo = saldo
-        else:
-            print("Client no trobat")
+        
 
     def eliminar_client(self, nom):
         client = self.buscar_client(nom)
         if client:
             self.clients.remove(client)
             print(f"{nom} eliminat")
-        else:
-            print("Client no trobat")
+        
 
 def llegir_numero(missatge):
     while True:
